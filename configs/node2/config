@@ -1,0 +1,15 @@
+[reticulum]
+  enable_transport = No
+  share_instance = Yes
+  shared_instance_port = 37430
+  instance_control_port = 37431
+
+[logging]
+  loglevel = 5
+
+[interfaces]
+  [[TCP Client to Node1]]
+    type = TCPClientInterface
+    enabled = Yes
+    target_host = 127.0.0.1
+    target_port = 4242

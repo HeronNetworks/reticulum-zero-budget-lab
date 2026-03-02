@@ -1,0 +1,22 @@
+[reticulum]
+  enable_transport = Yes
+  share_instance = Yes
+  shared_instance_port = 37428
+  instance_control_port = 37429
+  respond_to_probes = Yes
+
+[logging]
+  loglevel = 5
+
+[interfaces]
+  [[TCP Server Interface]]
+    type = TCPServerInterface
+    enabled = Yes
+    listen_ip = 127.0.0.1
+    listen_port = 4242
+
+  [[BetweenTheBorders Hub]]
+    type = TCPClientInterface
+    enabled = Yes
+    target_host = reticulum.betweentheborders.com
+    target_port = 4242
