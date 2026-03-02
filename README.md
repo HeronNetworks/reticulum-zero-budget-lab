@@ -9,19 +9,19 @@
 A step-by-step lab guide for setting up a working [Reticulum](https://reticulum.network/) mesh network on a single machine using only TCP/IP. You'll build a 3-node topology, connect it to the live public Reticulum network, and send end-to-end encrypted messages between nodes — all without buying any hardware.
 
 ```
-┌─────────────────────────────────────────┐
-│         Public Reticulum Network        │
-└───────────────────┬─────────────────────┘
-                    │
-         ┌──────────┴──────────┐
-         │       Node 1        │
-         │  Transport + Server │
-         └────┬──────────┬─────┘
-              │          │
-        ┌─────┴──┐  ┌───┴─────┐
-        │ Node 2 │  │ Node 3  │
-        │  Leaf  │  │  Leaf   │
-        └────────┘  └─────────┘
++-------------------------------------------+
+|         Public Reticulum Network           |
++---------------------+---------------------+
+                      |
+           +----------+----------+
+           |       Node 1        |
+           |  Transport + Server |
+           +-----+----------+---+
+                 |          |
+          +------+--+  +---+------+
+          | Node 2  |  |  Node 3  |
+          |  Leaf   |  |   Leaf   |
+          +---------+  +----------+
 ```
 
 ## Who Is This For?
